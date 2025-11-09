@@ -1,0 +1,15 @@
+openai>=1.40.0
+requests
+python-dotenv
+streamlit
+pandas
+plotly
+
+# Hugging Face
+huggingface-hub
+transformers
+torch
+
+# Optional performance
+accelerate
+bitsandbytes
