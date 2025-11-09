@@ -25,7 +25,7 @@ openai_client = OpenAI(api_key=openai_key)
 # Streamlit UI
 # ----------------------------
 st.set_page_config(page_title="Azure Policy Generator Comparison", layout="wide")
-st.title("🛡 AI-Powered Azure Policy JSON Generator (Comparison)")
+st.title("🛡 PROMPT2POLICY – FROM NATURAL LANGUAGE PROMPT TO AZURE POLICY")
 
 user_prompt = st.text_area(
     "Enter your policy requirement:",
@@ -138,3 +138,4 @@ if st.button("🚀 Generate & Compare"):
 
     df = pd.DataFrame([gpt_eval, groq_eval]).set_index("Model").T
     st.dataframe(df, use_container_width=True)
+
