@@ -96,7 +96,7 @@ if st.button("🚀 Generate & Compare"):
                     "model": "llama-3.3-70b-versatile",
                     "messages": [
                         {"role": "system",
-                         "content": "You strictly output JSON only."},
+                         "content": "You are an Azure Policy generator. Return only valid JSON, no markdown, no comments."},
                         {"role": "user", "content": user_prompt}
                     ],
                     "temperature": 0.0
@@ -138,4 +138,5 @@ if st.button("🚀 Generate & Compare"):
 
     df = pd.DataFrame([gpt_eval, groq_eval]).set_index("Model").T
     st.dataframe(df, use_container_width=True)
+
 
